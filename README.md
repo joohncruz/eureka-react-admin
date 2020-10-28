@@ -13,3 +13,7 @@ O componente <ReferenceField> sozinho não exibe nada. Ele apenas busca os dados
 ## Styles
 
 No JSS, você define estilos como um objeto JavaScript, usando as variantes JS dos nomes de propriedade CSS (por exemplo, textDecoration em vez de text-decoration). Para passar esses estilos para o componente, use makeStyles para construir um gancho React. O gancho criará novos nomes de classes para esses estilos e retornará os novos nomes de classes no objeto de classes.
+
+## Renderização Otimista
+
+Quando um usuário edita um registro e clica no botão “Salvar”, a IU mostra uma confirmação e exibe os dados atualizados antes de enviar a consulta de atualização para o servidor. O principal benefício é que as mudanças na interface do usuário são imediatas - não há necessidade de esperar pela resposta do servidor. É um grande conforto para os usuários.
