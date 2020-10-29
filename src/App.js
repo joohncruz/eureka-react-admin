@@ -7,12 +7,13 @@ import { UserList } from './users';
 import { PostList } from './posts';
 import { PostEdit } from './postEdit';
 import { PostCreate } from './postCreate';
+import Dashboard from './dashboard';
 
 import jsonServerProvider from 'ra-data-json-server';
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 const App = () => (
-  <Admin dataProvider={dataProvider}>
+  <Admin dashboard={Dashboard} dataProvider={dataProvider}>
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
     <Resource name="users" list={UserList} icon={UserIcon}/>
   </Admin>
